@@ -1,3 +1,4 @@
+from dotenv import dotenv_values
 from selenium.common.exceptions import TimeoutException, WebDriverException
 from selenium.webdriver.common.by import By
 from selenium.webdriver.firefox.options import Options as FirefoxOptions
@@ -9,10 +10,14 @@ from selenium.webdriver.support import expected_conditions as EC
 '''
 KONFIG TARO DI SIINI AJA
 '''
+config = dotenv_values('.env')
+
 ceisa_prm_url = 'http://prm.customs.go.id/Prm/'
-username = 'your_username' 
-password = ''
-prm_key = ''
+username = config['USERNAME'] 
+password = config['PASSWORD']
+prm_key = config['PRM_KEY']
+
+print(f'config: username={username}, password={password}, prm_key={prm_key}')
 
 # generate browser instance
 options = FirefoxOptions()
