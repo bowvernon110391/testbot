@@ -110,7 +110,7 @@ captures = {
 }
 
 for id, key in enumerate(captures):
-    tmp = list(filter(lambda x: x['name'] == key))
+    tmp = list(filter(lambda x: x['name'] == key, captures))
     if len(tmp):
         captures[key] = tmp[0]['value']
 
