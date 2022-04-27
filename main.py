@@ -16,13 +16,14 @@ ceisa_prm_url = 'http://prm.customs.go.id/Prm/'
 username = config['USERNAME'] 
 password = config['PASSWORD']
 prm_key = config['PRM_KEY']
+geckodriver = config['GECKODRIVER']
 
-print(f'config: username={username}, password={password}, prm_key={prm_key}')
+print(f'config: username={username}, password={password}, prm_key={prm_key}, geckodriver={geckodriver}')
 
 # generate browser instance
 options = FirefoxOptions()
 options.add_argument('--headless')
-driver = webdriver.Firefox(options=options, executable_path="./geckodriver.exe")
+driver = webdriver.Firefox(options=options, executable_path=f"./{geckodriver}")
 
 # enter url
 print("Loading target url...")
