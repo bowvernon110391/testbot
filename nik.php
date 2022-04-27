@@ -11,7 +11,7 @@ curl_setopt_array($curl, array(
   CURLOPT_FOLLOWLOCATION => true,
   CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
   CURLOPT_CUSTOMREQUEST => 'POST',
-  CURLOPT_POSTFIELDS =>'content=list&noKK=&nik=&nama=anwar+ibrahim&tempatLahir=&tglLahir=&namaIbu=&provinsi=&kabupaten=&kecamatan=&kelurahan=&page=2',
+  CURLOPT_POSTFIELDS =>'content=foto&txtNik=8271011508420001',
   CURLOPT_HTTPHEADER => array(
     'User-Agent:  Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:89.0) Gecko/20100101 Firefox/89.0',
     'Accept:  */*',
@@ -29,9 +29,9 @@ curl_setopt_array($curl, array(
 $response = curl_exec($curl);
 
 curl_close($curl);
-// echo $response;
+echo $response;
 
-$matches = [];
+/* $matches = [];
 $foundMatch = preg_match_all('%<td class="urut">(\d+)</td><td>(\d+)</td><td class="nik"><strong><a style=\"cursor: pointer;\">(\d+)</a></strong></td><td>([\w\.\,\s]+)</td><td>([\w\s\.\,]+)</td><td>(\d{4}\-\d{2}\-\d{2})</td><td>([\w\s\.\,]+)</td><td>([\w\s\.\,]+)</td><td>([\w\s\.\,]+)</td><td>([\w\s\.\,]+)</td><td>([\w\s\.\,]+)</td>%si', $response, $matches);
 
 if (!$foundMatch) {
@@ -81,4 +81,4 @@ for ($i = 0; $i < $dataCount; ++$i) {
   ];
 }
 
-echo json_encode($data);
+echo json_encode($data); */

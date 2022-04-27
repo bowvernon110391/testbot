@@ -10,9 +10,9 @@ from selenium.webdriver.support import expected_conditions as EC
 KONFIG TARO DI SIINI AJA
 '''
 ceisa_prm_url = 'http://prm.customs.go.id/Prm/'
-username = 'your_username' 
-password = ''
-prm_key = ''
+username = 'permadi.pamungkas' 
+password = 'permadi08'
+prm_key = 'aTw3nhA'
 
 # generate browser instance
 options = FirefoxOptions()

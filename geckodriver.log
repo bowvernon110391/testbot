@@ -107,3 +107,20 @@ console.error: services.settings:
 
 ###!!! [Child][MessageChannel] Error: (msgtype=0x230030,name=PBrowser::Msg___delete__) Channel closing: too late to send/recv, messages will be lost
 
+1629701983095	geckodriver	INFO	Listening on 127.0.0.1:64626
+1629701986134	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "--marionette" "--headless" "-foreground" "-no-remote" "-profile" "C:\\Users\\KRIBO_~1\\AppData\\Local\\Temp\\rust_mozprofilehVLWQH"
+*** You are running in headless mode.
+1629701987608	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Kribo_007\\AppData\\Local\\Temp\\rust_mozprofilehVLWQH\\search.json.mozlz4", (void 0)))
+1629701999201	Marionette	INFO	Listening on port 64636
+1629702000660	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[Child 5396, MediaDecoderStateMachine #1] WARNING: 16a47e54580 Could not set cubeb stream name.: file /builds/worker/checkouts/gecko/dom/media/AudioStream.cpp:367
+1629702014103	Marionette	INFO	Stopped listening on port 64636
+JavaScript error: resource:///modules/Interactions.jsm, line 209: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x690023,name=PNecko::Msg_RemoveRequestContext) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
