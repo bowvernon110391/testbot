@@ -101,3 +101,18 @@ print(cookies)
 
 # quit
 driver.quit()
+
+# filter data
+captures = {
+    'JSESSIONID': None,
+    'BIGipServerPOOL_DJBC_PRM_INHOUSE': None
+}
+
+for id, key in enumerate(captures):
+    tmp = list(filter(lambda x: x['name'] == key))
+    if len(tmp):
+        captures[key] = tmp[0]['value']
+
+print("\nInteresting data:")
+print(captures)
+
