@@ -104,16 +104,13 @@ print(cookies)
 driver.quit()
 
 # filter data
-captures = {
-    'JSESSIONID': None,
-    'BIGipServerPOOL_DJBC_PRM_INHOUSE': None
-}
+cookie_strings = list(map(lambda x: x['name']+'='+x['value'], cookies))
+cookie_strings = '; '.join(cookie_strings)
+print('Cookie strings')
+print(cookie_strings)
 
-for id, key in enumerate(captures):
-    tmp = list(filter(lambda x: x['name'] == key, captures))
-    if len(tmp):
-        captures[key] = tmp[0]['value']
-
-print("\nInteresting data:")
-print(captures)
+# write output
+f = open("./cookies.txt","w")
+f.write(cookie_strings)
+f.close()
 
